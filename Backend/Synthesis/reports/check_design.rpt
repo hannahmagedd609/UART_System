@@ -1,0 +1,342 @@
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Wed Oct 23 18:13:56 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     7
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              24
+    Cells do not drive (LINT-1)                                    20
+    Leaf pins connected to undriven nets (LINT-58)                  2
+    Cells have undriven hier pins (LINT-59)                         2
+
+Nets                                                                2
+    Undriven nets (LINT-3)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'ClkDiv_width8', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'ClkDiv_width4', cell 'C94' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C400' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C401' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C402' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C406' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C431' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C433' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C435' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_WR', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_RD', cell 'C109' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Serial', cell 'C111' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'C283' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C101' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C108' does not drive any nets. (LINT-1)
+Warning: In design 'data_sampling', cell 'C127' does not drive any nets. (LINT-1)
+Warning: In design 'deserializer_DATA_WIDTH8', cell 'B_0' does not drive any nets. (LINT-1)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/stop_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/start_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', port 'SI' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'Test_Mode' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_clk' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_rst' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SO' is not connected to any nets. (LINT-28)
+Warning: In design 'data_sampling', port 'Prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYSTEM_CTRL_BYTE8', output port 'clk_div_en' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'UART_MUX', input pin 'DATA1_0' of leaf cell 'C31' is connected to undriven net 'start_bit'.  (LINT-58)
+Warning: In design 'UART_MUX', input pin 'DATA4_0' of leaf cell 'C31' is connected to undriven net 'stop_bit'.  (LINT-58)
+Warning: In design 'UART_TOP', input pin 'start_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'UART_TOP', input pin 'stop_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+1
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Wed Oct 23 18:18:46 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     7
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              24
+    Cells do not drive (LINT-1)                                    20
+    Leaf pins connected to undriven nets (LINT-58)                  2
+    Cells have undriven hier pins (LINT-59)                         2
+
+Nets                                                                2
+    Undriven nets (LINT-3)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'ClkDiv_width8', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'ClkDiv_width4', cell 'C94' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C400' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C401' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C402' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C406' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C431' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C433' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C435' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_WR', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_RD', cell 'C109' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Serial', cell 'C111' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'C283' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C101' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C108' does not drive any nets. (LINT-1)
+Warning: In design 'data_sampling', cell 'C127' does not drive any nets. (LINT-1)
+Warning: In design 'deserializer_DATA_WIDTH8', cell 'B_0' does not drive any nets. (LINT-1)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/stop_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/start_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', port 'SI' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'Test_Mode' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_clk' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_rst' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SO' is not connected to any nets. (LINT-28)
+Warning: In design 'data_sampling', port 'Prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYSTEM_CTRL_BYTE8', output port 'clk_div_en' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'UART_MUX', input pin 'DATA1_0' of leaf cell 'C31' is connected to undriven net 'start_bit'.  (LINT-58)
+Warning: In design 'UART_MUX', input pin 'DATA4_0' of leaf cell 'C31' is connected to undriven net 'stop_bit'.  (LINT-58)
+Warning: In design 'UART_TOP', input pin 'start_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'UART_TOP', input pin 'stop_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+1
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Wed Oct 23 18:20:12 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     7
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              24
+    Cells do not drive (LINT-1)                                    20
+    Leaf pins connected to undriven nets (LINT-58)                  2
+    Cells have undriven hier pins (LINT-59)                         2
+
+Nets                                                                2
+    Undriven nets (LINT-3)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'ClkDiv_width8', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'ClkDiv_width4', cell 'C94' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C400' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C401' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C402' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C406' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C431' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C433' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C435' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_WR', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_RD', cell 'C109' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Serial', cell 'C111' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'C283' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C101' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C108' does not drive any nets. (LINT-1)
+Warning: In design 'data_sampling', cell 'C127' does not drive any nets. (LINT-1)
+Warning: In design 'deserializer_DATA_WIDTH8', cell 'B_0' does not drive any nets. (LINT-1)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/stop_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/start_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', port 'SI' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'Test_Mode' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_clk' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_rst' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SO' is not connected to any nets. (LINT-28)
+Warning: In design 'data_sampling', port 'Prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYSTEM_CTRL_BYTE8', output port 'clk_div_en' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'UART_MUX', input pin 'DATA1_0' of leaf cell 'C31' is connected to undriven net 'start_bit'.  (LINT-58)
+Warning: In design 'UART_MUX', input pin 'DATA4_0' of leaf cell 'C31' is connected to undriven net 'stop_bit'.  (LINT-58)
+Warning: In design 'UART_TOP', input pin 'start_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'UART_TOP', input pin 'stop_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+1
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Wed Oct 23 18:22:30 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     7
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              24
+    Cells do not drive (LINT-1)                                    20
+    Leaf pins connected to undriven nets (LINT-58)                  2
+    Cells have undriven hier pins (LINT-59)                         2
+
+Nets                                                                2
+    Undriven nets (LINT-3)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'ClkDiv_width8', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'ClkDiv_width4', cell 'C94' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C400' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C401' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C402' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C406' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C431' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C433' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C435' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_WR', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_RD', cell 'C109' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Serial', cell 'C111' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'C283' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C101' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C108' does not drive any nets. (LINT-1)
+Warning: In design 'data_sampling', cell 'C127' does not drive any nets. (LINT-1)
+Warning: In design 'deserializer_DATA_WIDTH8', cell 'B_0' does not drive any nets. (LINT-1)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/stop_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/start_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', port 'SI' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'Test_Mode' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_clk' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_rst' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SO' is not connected to any nets. (LINT-28)
+Warning: In design 'data_sampling', port 'Prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYSTEM_CTRL_BYTE8', output port 'clk_div_en' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'UART_MUX', input pin 'DATA1_0' of leaf cell 'C31' is connected to undriven net 'start_bit'.  (LINT-58)
+Warning: In design 'UART_MUX', input pin 'DATA4_0' of leaf cell 'C31' is connected to undriven net 'stop_bit'.  (LINT-58)
+Warning: In design 'UART_TOP', input pin 'start_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'UART_TOP', input pin 'stop_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+1
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Wed Oct 23 21:18:39 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     7
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              24
+    Cells do not drive (LINT-1)                                    20
+    Leaf pins connected to undriven nets (LINT-58)                  2
+    Cells have undriven hier pins (LINT-59)                         2
+
+Nets                                                                2
+    Undriven nets (LINT-3)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'ClkDiv_width8', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'ClkDiv_width4', cell 'C94' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C400' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C401' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C402' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C406' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C431' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C433' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C435' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_WR', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_RD', cell 'C109' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Serial', cell 'C111' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'C283' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C101' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C108' does not drive any nets. (LINT-1)
+Warning: In design 'data_sampling', cell 'C127' does not drive any nets. (LINT-1)
+Warning: In design 'deserializer_DATA_WIDTH8', cell 'B_0' does not drive any nets. (LINT-1)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/stop_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/start_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', port 'SI' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'Test_Mode' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_clk' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_rst' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SO' is not connected to any nets. (LINT-28)
+Warning: In design 'data_sampling', port 'Prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYSTEM_CTRL_BYTE8', output port 'clk_div_en' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'UART_MUX', input pin 'DATA1_0' of leaf cell 'C31' is connected to undriven net 'start_bit'.  (LINT-58)
+Warning: In design 'UART_MUX', input pin 'DATA4_0' of leaf cell 'C31' is connected to undriven net 'stop_bit'.  (LINT-58)
+Warning: In design 'UART_TOP', input pin 'start_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'UART_TOP', input pin 'stop_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+1
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Wed Oct 23 21:19:44 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     7
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                              24
+    Cells do not drive (LINT-1)                                    20
+    Leaf pins connected to undriven nets (LINT-58)                  2
+    Cells have undriven hier pins (LINT-59)                         2
+
+Nets                                                                2
+    Undriven nets (LINT-3)                                          2
+--------------------------------------------------------------------------------
+
+Warning: In design 'ClkDiv_width8', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'ClkDiv_width4', cell 'C94' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C400' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C401' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C402' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C406' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C431' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C433' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_OUT_WD16_DATA_WD8_FUN_WD4', cell 'C435' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_WR', cell 'C114' does not drive any nets. (LINT-1)
+Warning: In design 'FIFO_RD', cell 'C109' does not drive any nets. (LINT-1)
+Warning: In design 'UART_Serial', cell 'C111' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'B_19' does not drive any nets. (LINT-1)
+Warning: In design 'uart_rx_fsm_DATA_WIDTH8', cell 'C283' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C101' does not drive any nets. (LINT-1)
+Warning: In design 'edge_bit_counter', cell 'C108' does not drive any nets. (LINT-1)
+Warning: In design 'data_sampling', cell 'C127' does not drive any nets. (LINT-1)
+Warning: In design 'deserializer_DATA_WIDTH8', cell 'B_0' does not drive any nets. (LINT-1)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/stop_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', net 'U9_UART_TOP/U0_UART_TX/start_bit_M' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'SYS_TOP', port 'SI' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SE' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'Test_Mode' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_clk' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'scan_rst' is not connected to any nets. (LINT-28)
+Warning: In design 'SYS_TOP', port 'SO' is not connected to any nets. (LINT-28)
+Warning: In design 'data_sampling', port 'Prescale[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'SYSTEM_CTRL_BYTE8', output port 'clk_div_en' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'UART_MUX', input pin 'DATA1_0' of leaf cell 'C31' is connected to undriven net 'start_bit'.  (LINT-58)
+Warning: In design 'UART_MUX', input pin 'DATA4_0' of leaf cell 'C31' is connected to undriven net 'stop_bit'.  (LINT-58)
+Warning: In design 'UART_TOP', input pin 'start_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'UART_TOP', input pin 'stop_bit' of hierarchical cell 'MUX_DUT' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+1
