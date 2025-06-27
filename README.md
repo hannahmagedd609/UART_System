@@ -40,7 +40,7 @@ This system has been fully synthesized and verified using the complete ASIC flow
 - Routing
 - GDSII Generation
 
-### ✅ Backend Checks:
+### Backend Checks:
 - **Timing Analysis** (STA)
 - **Power Analysis**
 - **Area Estimation**
