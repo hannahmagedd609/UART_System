@@ -1,0 +1,198 @@
+module SYS_TOP  #(parameter WIDTH = 8, ADD_WIDTH = 4, PRE_WD = 6, ALU_WIDTH = 16) (
+ input   wire                          RST_N,
+ input   wire                          UART_CLK,
+ input   wire                          REF_CLK,
+ input   wire                          UART_RX_IN,
+ output  wire                          UART_TX_O,
+ output  wire                          parity_error,
+ output  wire                          framing_error
+);
+
+
+wire [WIDTH - 1:0] UART_CONFIG, Rd_D, Wr_D, Op_A, Op_B, 
+                                 RX_OUT_P, RX_OUT_SYNC, RD_DATA, WR_DATA;
+wire [ALU_WIDTH - 1:0] ALU_OUT;
+wire RX_VLD, RX_VLD_SYNC, FIFO_FULL, WR_INC, RD_INC, ALU_EN, RdEn,
+     WrEn, ALU_OUT_VLD, RD_D_VLD, F_EMPTY, BUSY, clk_dEN;
+wire GATE_EN, TX_CLK, RX_CLK, ALU_CLK, SYNC_RST1, SYNC_RST2; 
+wire [ADD_WIDTH - 1:0] Address, ALU_FUN;
+wire [WIDTH - 1:0] Prescale;
+wire [WIDTH - 1:0] div_ratio;
+wire [ADD_WIDTH - 1:0] Pre_div;
+
+///********************************************************///
+//////////////////// Reset synchronizers /////////////////////
+///********************************************************///
+RST_SYNC U0_RST_SYNC1 (
+.RST(RST_N),
+.CLK(REF_CLK),
+.SYNC_RST(SYNC_RST1)
+);
+
+RST_SYNC U1_RST_SYNC2 (
+.RST(RST_N),
+.CLK(UART_CLK),
+.SYNC_RST(SYNC_RST2)
+);
+
+
+///********************************************************///
+///////////////////// Data Synchronizers /////////////////////
+///********************************************************///
+DATA_SYNC #(.BUS_WIDTH(WIDTH)) U2_DATA_SYNC (
+.unsync_bus(RX_OUT_P),
+.bus_enable(RX_VLD),
+.D_CLK(REF_CLK),
+.RST(SYNC_RST1),
+.sync_bus(RX_OUT_SYNC),
+.enable_pulse(RX_VLD_SYNC)
+);
+
+///********************************************************///
+///////////////////////// Async FIFO /////////////////////////
+///********************************************************///
+ASYNC_FIFO #(.DATA_WIDTH(WIDTH), .ADD_WIDTH(ADD_WIDTH)) U3_FIFO (
+.W_CLK(REF_CLK),
+.W_RST(SYNC_RST1),
+.W_INC(WR_INC),
+.R_CLK(TX_CLK),
+.R_RST(SYNC_RST2),
+.R_INC(RD_INC),
+.WR_DATA(WR_DATA),
+.FULL(FIFO_FULL),
+.RD_DATA(RD_DATA),
+.EMPTY(F_EMPTY)
+);
+
+///********************************************************///
+//////////////////////// Pulse Generator /////////////////////
+///********************************************************///
+PULSE_GEN U4_PLSE_GEN1 (
+.CLK(TX_CLK),
+.RST(SYNC_RST2),
+.LVL_SIG(BUSY),
+.PULSE_SIG(RD_INC)
+);
+
+
+///********************************************************///
+//////////// Clock Divider for UART_TX Clock /////////////////
+///********************************************************///
+ClkDiv #(.width(WIDTH)) U6_CLK_DIV_TX (
+.i_ref_clk(UART_CLK),
+.i_rst_n(SYNC_RST2),
+.i_clk_en(clk_dEN),
+.i_div_ratio(div_ratio),
+.o_div_clk(TX_CLK)
+);
+
+///********************************************************///
+/////////////////////// Custom Mux Clock /////////////////////
+///********************************************************///
+Pres_MUX #(.WIDTH(ADD_WIDTH), .PRE_WD(PRE_WD)) U7_PRE_MUX (
+.Prescale(UART_CONFIG[7:2]),
+.div_ratio(Pre_div)
+);
+
+///********************************************************///
+//////////// Clock Divider for UART_RX Clock /////////////////
+///********************************************************///
+ClkDiv #(.width(ADD_WIDTH)) U8_CLK_DIV_RX (
+.i_ref_clk(UART_CLK),
+.i_rst_n(SYNC_RST2),
+.i_clk_en(clk_dEN),
+.i_div_ratio(Pre_div),
+.o_div_clk(RX_CLK)
+);
+
+///********************************************************///
+/////////////////////////// UART /////////////////////////////
+///********************************************************///
+UART #(.DATA_WIDTH(WIDTH)) U9_UART_TOP (
+.RST(SYNC_RST2),
+.TX_CLK(TX_CLK),
+.RX_CLK(RX_CLK),
+.RX_IN_S(UART_RX_IN),
+.RX_OUT_P(RX_OUT_P), 
+.RX_OUT_V(RX_VLD),
+.TX_IN_P(RD_DATA), 
+.TX_IN_V(!F_EMPTY), 
+.TX_OUT_S(UART_TX_O),
+.TX_OUT_V(BUSY), 
+.Prescale(UART_CONFIG[7:2]), 
+.parity_enable(UART_CONFIG[0]),
+.parity_type(UART_CONFIG[1]),
+.parity_error(parity_error),
+.framing_error(framing_error)
+);
+
+///********************************************************///
+//////////////////// System Controller ///////////////////////
+///********************************************************///
+SYSTEM_CTRL #(.BYTE(WIDTH)) U10_SYS_CTRL (
+.ALU_OUT(ALU_OUT),
+.ALU_OUT_VLD(ALU_OUT_VLD),
+.RX_P_DATA(RX_OUT_SYNC),
+.RX_D_VLD(RX_VLD_SYNC),
+.FIFO_FULL(FIFO_FULL),
+.RdData(Rd_D),
+.RdData_Valid(RD_D_VLD),
+.CLK(REF_CLK),
+.RST(SYNC_RST1),
+.ALU_EN(ALU_EN),
+.ALU_FUN(ALU_FUN),
+.CLK_EN(GATE_EN),
+.Address(Address),
+.WrEn(WrEn),
+.RdEn(RdEn),
+.WrData(Wr_D),
+.TX_P_Data(WR_DATA),
+.TX_D_VLD(WR_INC),
+.clk_div_en(clk_dEN)
+);
+
+///********************************************************///
+/////////////////////// Register File ////////////////////////
+///********************************************************///
+Reg_File #(.ADD_WIDTH(ADD_WIDTH), .RdWr_WIDTH(WIDTH), .RegF_DEPTH(ALU_WIDTH)) U11_REG_FILE (
+.RdEn(RdEn),
+.WrEn(WrEn),
+.CLK(REF_CLK),
+.RST(SYNC_RST1),
+.ADDRESS(Address),
+.Wr_DATA(Wr_D),
+.Rd_DATA(Rd_D),
+.Rd_DATA_VLD(RD_D_VLD),
+.REG0(Op_A),
+.REG1(Op_B),
+.REG2(UART_CONFIG),
+.REG3(div_ratio) 
+);
+
+///********************************************************///
+//////////////////////////// ALU /////////////////////////////
+///********************************************************///
+ALU #(.OUT_WD(ALU_WIDTH), .DATA_WD(WIDTH), .FUN_WD(ADD_WIDTH)) U12_ALU (
+.A(Op_A),
+.B(Op_B),
+.ALU_FUN(ALU_FUN),
+.CLK(ALU_CLK),
+.RST(SYNC_RST1),
+.ENABLE(ALU_EN),
+.ALU_OUT(ALU_OUT),
+.OUT_VALID(ALU_OUT_VLD)
+);
+
+///********************************************************///
+///////////////////////// Clock Gating ///////////////////////
+///********************************************************///
+CLK_GATE U13_CLK_GATE (
+.CLK_EN(GATE_EN),
+.CLK(REF_CLK),
+.GATED_CLK(ALU_CLK)
+);
+
+
+endmodule 
+
+
